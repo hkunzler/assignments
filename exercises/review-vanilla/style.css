@@ -1,0 +1,12 @@
+#happy-friday {
+    background-color: slategray;
+    text-align: center;
+}
+body{
+    margin: 0px;
+    background-color: skyblue;
+}
+#top-picture{
+    border-image-width: 0%;
+    height: 100px;
+}
