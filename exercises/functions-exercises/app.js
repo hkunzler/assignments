@@ -12,6 +12,16 @@ function largestOfThreeNumbers(number1, number2, number3){
     } else {
         console.log(number3)
     }
+    //OR Math.max(num1, num2, num3)
+    //OR
+    // var numsArray = [num1, num2, num3];
+    // var largest = 0;
+    // for(var i = 0; i < numsArray.lengthl; i++){
+    //     if(numsArray[i] > largest){
+    //         largest = munArray[i]
+    //     }
+    // }
+    // return largest
 }
 
 largestOfThreeNumbers(1, 5, 3)
@@ -75,6 +85,16 @@ function mostFrequentCharacter(string){
     }
 
 mostFrequentCharacter("hellooo")
+
+function quadraticEquation(a, b, c){
+    // x = (- b +/- sqrt(b^2 - 4ac)) / 2a
+    var squarerooot = Math.sqrt((b * b) - (4 * a * c))
+    var plus = (-b + squarerooot) / (2 * a);
+    var minus = (-b - squarerooot) / (2 * a);
+    console.log (plus + "\n" + minus)
+}
+
+quadraticEquation(2, 1, -6)
 
 // var myArray = [];
 // var subArray = [];
