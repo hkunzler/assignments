@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 15px 25px;
+}
+a:hover, a:active{
+    background-color: darkviolet;
+}
+ul {
+    background-color: darkslateblue;
+    list-style-type: none;
+    overflow: hidden;
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+li{
+    float: right;
+}
+
+h1{
+    font-size: 500%;
+    color: aliceblue;
+    padding: 10% 25%;
+    background-image: url("food.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+body{
+    background-color: azure;
+}
+h2{
+    font-size: 250%;
+    text-align: center;
+    padding: 25px;
+}
+h3{
+    font-size: 150%;
+    padding: 15px;
+    display: inline-block;
+    width: 49%;
+    text-decoration: underline black;
+}
+h3:hover{
+    cursor: pointer;
+    color: violet;
+}
+.date{
+    text-decoration: none;
+    font-size: 110%;
+    text-align: right;
+}
+p {
+    font-size: 125%;
+}
+.blogMargin{
+    margin: 10% 25%;
+}
+img{
+    float: right;
+    width: 50%;
+    border: solid black;
+    margin: 1%;
+}
+
+.checked{
+    color: orange;
+}
+.stars{
+    padding: 15px;
+}

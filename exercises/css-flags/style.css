@@ -9,7 +9,9 @@
  .sweden,
  .gambia,
  .tonga,
- .japan {
+ .japan,
+ .greece,
+ .niger, .maldives {
      height: 150px;
      width: 250px;
      border: solid lightblue;
@@ -209,3 +211,104 @@
      border-radius: 50%;
      display: inline-block;
  }
+ .greece {
+    background-color: blue;
+    text-align: center;
+    /* border-bottom-width: 50px; */
+}
+
+.greece .cross {
+    background: white;
+    height: 70px;
+    position: relative;
+    width: 15px;
+    display: inline-block;
+    /* margin-top: 1%; */
+    margin-top: 0px;
+    margin-left: -175px;
+}
+
+.greece .cross:after {
+    background: white;
+    content: "";
+    height: 15px;
+    /*width of horizontal arms */
+    left: -30px;
+    position: absolute;
+    top: 28px;
+    width: 70px;
+}
+
+.greece .blue{
+    width: 73%;
+    height: 10%;
+    background-color: white;
+    margin-left: 27%;
+    margin-top: -24%;
+}
+.greece .blue2{
+    width: 73%;
+    height: 10%;
+    background-color: white;
+    margin-left: 27%;
+    margin-top: 5%;
+}
+.greece .blue3, .blue4, .blue5{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    margin-top: 5%;
+}
+.niger {
+    height: 250px;
+    text-align: center;
+}
+
+.niger .orangeCircle {
+    background-color: darkorange;
+    width: 35%;
+    height: 35%;
+    margin-top: 35%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.niger .orange{
+    width: 100%;
+    height: 30%;
+    background-color: darkorange;
+    /* display: inline-block; */
+    /* margin-bottom: 200%; */
+    margin-top: -72%;
+}
+.niger .green{
+    width: 100%;
+    height: 28%;
+    background-color: rgb(13, 128, 13);
+    /* display: inline-block; */
+    /* margin-bottom: 100%; */
+    margin-top: 42%;
+}
+.maldives{
+    background-color: red;
+}
+.maldives .white{
+position: relative;
+/* display: block; */
+margin: 20%;
+width: 30%;
+height: 30%;
+background-color: transparent;
+box-shadow:  -10px 1px  white;
+border-radius: 50%;
+line-height: 1000%;
+margin-left: 45%;
+ }
+.maldives .green{
+    width: 70%;
+    height:50%;
+    background-color: green;
+    margin-top: -44%;
+    margin-left: 15%;
+
+}
