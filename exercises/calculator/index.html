@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form name='calculator' id="calculator">
+        <h1 id="center">Calculator</h1>
+        <div id='margin'>
+            <div>
+                <h2>Addition</h2>
+                <input type="number" name='add1'>
+                + <input type="number" name='add2'> =
+                <div id="sumAnswer"></div>
+                <br><button id="add">Add</button>
+            </div>
+
+            <div>
+                <h2>Subtraction</h2>
+                <input type="number" name='subtract1'>
+                - <input type="number" name='subtract2'> =
+                <div id="subtractionAnswer"></div>
+                <br><button id="subtract">Subtract</button>
+            </div>
+
+            <div>
+                <h2>Multiplication</h2>
+                <input type="number" name='multiply1'>
+                x <input type="number" name='multiply2'> =
+                <div id="multiplyAnswer"></div>
+                <br><button id="multiply">Multiply</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div id="calculator-container">
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

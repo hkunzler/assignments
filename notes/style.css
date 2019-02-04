@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+.container{
+    background: blue;
+    width: 100%;
+    height: 100vh;
+}
+
+@media(min-width: 500pt){
+    .container{
+        width: 50vw;
+    }
+}

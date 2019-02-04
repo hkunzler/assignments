@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <form name="todoForm">
+        <input type="text" name='title'>
+        <h1>Chocolate or Skittles</h1>
+       Chocolate: <input type="radio" name="favCandy" value="Chocolate">
+        Skittles: <input type="radio" name="favCandy" value="Skittles">
+
+        <h1>Favorite Movie</h1>
+        <select name='favMovie'>
+            <option value ='Die Hard'>Die Hard</option>
+            <option value ='Blade Runner'>Blade Runner</option>
+            <option value ='Maniac'>Maniac</option>
+            <option value ='Frozen'>Frozen</option>
+            <option value ='The Great Hack'>The Great Hack</option>
+        </select>
+
+        <h1>What is the meaning of life (choose all that apply)</h1>
+        42:     <input type="checkbox" name='lifeMeaning' value='42'>
+        No meaning:     <input type="checkbox" name='lifeMeaning' value='No meaning'>
+        Pasta:     <input type="checkbox" name='lifeMeaning' value='Pasta'>
+        Alcohol:     <input type="checkbox" name='lifeMeaning' value='Alcohol'>
+        <button>Submit</button>
+    </form>
+
+    <div id="todo-list">
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
