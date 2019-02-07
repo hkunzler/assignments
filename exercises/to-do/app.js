@@ -17,7 +17,7 @@ todoForm.addEventListener('submit', function(e){
     // todoContainer.appendChild(p)
 
     // console.log(todoForm.favCandy.value)
-    // console.log(todoForm.favMovie.value)
+    // console.log(todoForm.favMovie.value)=
     var checkBoxes = todoForm.lifeMeaning
     var checkBoxValues = []
 
@@ -27,4 +27,4 @@ todoForm.addEventListener('submit', function(e){
         }
     }
     console.log(checkBoxValues)
-})
+})v

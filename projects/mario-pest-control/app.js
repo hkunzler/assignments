@@ -5,7 +5,7 @@ mario.addEventListener("submit", function (e) {
     e.preventDefault()
     marioContainer.innerHTML = ''
     if (isNaN(parseInt(mario.goombas.value)) === true) {
-        marioÎ.goombas.value = 0;
+        mario.goombas.value = 0;
     }
     if (isNaN(parseInt(mario.bobombs.value)) === true) {
         mario.bobombs.value = 0;
