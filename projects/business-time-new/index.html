@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- carousel -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- carousel -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Coffee Rush</title>
+</head>
+
+<body>
+
+    <h1 class="title">Coffee Rush</h1>
+    <nav class="navBar" id="navBar">
+        <div class="navBar" id="navBar">
+            <a class='test' href="#" class="active hidden">Home</a>
+            <a class='test' href="gallery.html" class='hidden'>Gallery</a>
+            <a class='test' href="about.html" class='hidden'>About</a>
+            <a class='test' href="contact.html" class='hidden'>Contact</a>
+        </div>
+        <button href="#" class='icon'>
+            <i class="fa fa-bars"></i>
+        </button>
+    </nav>
+
+    <article class="pageContainer">
+            <div class="socialMedia">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <br>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <br>
+                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                </div>
+        <section>
+            <h1 class="pageTitle">So much coffee...</h1>
+            <div id="move" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#move" data-slide-to="0" class="active"></li>
+                    <li data-target="#move" data-slide-to="1"></li>
+                    <li data-target="#move" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/coffeeMilk.jpeg" alt="Milk being poured into coffee">
+                        <div class="text-box">
+                            <h3>Hello, World</h3>
+                            <p>Lorem, ipsum dolor sit. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/bunchOfCoffee.jpeg" alt="Circle of coffee cups">
+                        <div class="text-box">
+                            <h3>Hello, World</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/shotsOfCoffee.jpeg" alt="Row of coffee cups">
+                        <div class="text-box">
+                            <h3>Hello, World</h3>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#move" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#move" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            </div>
+
+        </section>
+    </article>
+    <script src="app.js"></script>
+</body>
+
+</html>

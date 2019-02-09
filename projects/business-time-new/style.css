@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+body {
+    background: #fdf9f3;
+}
+
+.title {
+    background: url(images/mocha.jpeg);
+    padding: 15%;
+    text-emphasis: center;
+    color: #fdf9f3;
+    background-size: cover;
+    z-index: -1;
+    font-size: 10vw;
+}
+
+.navBar {
+    background: black;
+    padding: 1% 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: #fdf9f3;
+    font-size: 1vh;
+    border: 1pt solid black;
+    text-align: center;
+    font-size: 3vh;
+    padding: 0 15vh;
+
+}
+
+a .active {
+    background: #fdf9f3;
+    color: black;
+    font-weight: bold;
+}
+
+.navBar a:hover {
+    background: #fdf9f3;
+    color: black;
+}
+
+
+.icon {
+    display: block;
+}
+
+button {
+    color: #fdf9f3;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.sticky {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.sticky+.pageContainer {
+    padding-top: 10%;
+}
+
+.pageContainer {
+    margin: 10% 10%;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99;
+    text-align: space;
+    justify-content: center;
+    left: 0;
+    padding: 3%;
+    position: -webkit-sticky;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+.socialMedia a {
+    color: black;
+    font-size: 3vh;
+}
+
+.fa-instagram {
+    font-weight: bolder;
+}
+
+#returnTop {
+    display: none;
+    position: fixed;
+    background: #fdf9f3;
+    color: black;
+    border: none;
+    bottom: 5%;
+    right: 0%;
+    z-index: 99;
+    padding: 3%;
+    font-size: 80%;
+    border-radius: 5%;
+    margin-bottom: -10%;
+}
+
+.pageTitle {
+    font-size: 5vh;
+}
+
+@media(max-width: 650px) {
+    .hidden {
+        display: none !important;
+        padding: 0;
+    }
+}
+
+@media(min-width: 650px) {
+    .hidden {
+        display: flex !important;
+        padding: 0;
+    }
+
+    .icon {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+    }
+}

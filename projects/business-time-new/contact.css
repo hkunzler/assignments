@@ -1,0 +1,42 @@
+form {
+    margin: 10% 9%;
+    border: solid black;
+    padding: 5%;
+    background: black;
+    padding-bottom: 10%;
+    color: white;
+    font-size: 2vh;
+}
+
+#message {
+    padding-bottom: 100pt;
+}
+
+input {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 1%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    resize: vertical;
+}
+
+#form button {
+    margin: 0;
+    width: 50%;
+}
+
+#locationSpace {
+    margin-top: 2%;
+}
+
+span.locations {
+    display: block;
+    margin: 5% 2%;
+    font-size: 150%;
+}
+
+.pageContainer{
+    font-size: 2vh;
+}
