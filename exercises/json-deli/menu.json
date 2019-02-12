@@ -1,0 +1,65 @@
+{
+"title": "JSON's Deli",
+"menu": {
+    "appetizers": [
+        {
+            "name": "breadsticks",
+            "ingredients": ["bread", "sticks"],
+            "description": "yummy bread=sticks"
+        },
+        {
+            "name": "salad",
+            "ingredients": ["lettuce", "more lettuce"],
+            "description": "Just a lot of luttuce"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "cookies",
+            "ingredients": ["chocolate", "dough"],
+            "description": "yummy"
+        },
+        {
+            "name": "brownies",
+            "ingredients": ["chocolate", "more chocolate"],
+            "description": "a whole lot of chocolate"
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "name": "bologna",
+            "ingredients": ["bread", "baloney"],
+            "description": "ehhh"
+        },
+        {
+            "name": "salmon lox",
+            "ingredients": ["salmon", "bread"],
+            "description": "salmon in a blanket"
+        }
+    ],
+    "hot sandwhiches": [
+        {
+            "name": "grilled cheese",
+            "ingredients": ["cheese", "bread"],
+            "description": "cheesey goodness"
+        },
+        {
+            "name": "grilled cheese and tomato",
+            "ingredients": ["cheese", "tomato"],
+            "description": "cheesey goodness with tomatos"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "coffee",
+            "ingredients": ["coffee beans", "water"],
+            "description": "caffeine"
+        },
+        {
+            "name": "hot chocolate",
+            "ingredients": ["chocolate", "more chocolate"],
+            "description": "chocolate in a cup"
+        }
+    ]
+}
+}
