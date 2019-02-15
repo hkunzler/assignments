@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 #container {
@@ -9,29 +10,48 @@
 
 header {
     font-size: 20px;
-    background-color: dodgerblue;
+    background-image: url(images/gridlines-opaque.png),
+        url(images/contours@2x.png),
+        url(images/huntington.jpg);
+    background-repeat: no-repeat,
+        no-repeat,
+        no-repeat;
+    background-size: auto, cover, cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 230px;
+}
+
+header > #title{
+    font-family: 'Julius Sans One', sans-serif;
+    color: #FFFFFF;
+    width: 100%;
+    /* display: block; */
+}
+
+header > #titleItalic{
+    width: 100%;
+    /* display: block; */
 }
 
 main {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: darkkhaki
+    background-color: #FFFFFF;
+    margin: 25px 10%;
 }
 
 footer {
     height: 50px;
-    background-color: violet;
+    background-color: #E4EDE8;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 700px) {
     #container {
         grid-template-columns: 3fr 1fr;
     }
