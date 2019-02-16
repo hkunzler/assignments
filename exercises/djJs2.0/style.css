@@ -1,0 +1,81 @@
+#flexBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box6 {
+    width: 100%;
+    height: 10vh;
+    border: solid black;
+    margin: 10% 2%;
+}
+
+#box1 {
+    background: blueviolet;
+}
+
+#box1:hover {
+    background: blue;
+    border: dotted green;
+    transition: background 2s, border 2s, linear 1s;
+}
+
+#box2 {
+    background: aqua;
+}
+
+#box2:hover {
+    border-radius: 50%;
+    box-shadow: 5px 10px;
+    transition: border-radius 2s, box-shadow 2s, linear 1s;
+}
+
+#box3 {
+    background: crimson;
+}
+
+#box3:hover {
+    width: 120%;
+    margin: 10%;
+    transition: width 2s,
+        margin 2s,
+        linear 1s;
+}
+
+#box4 {
+    background: darkorange;
+}
+
+#box4:hover{
+    background: linear-gradient(blue,green);
+    height: 20vh;
+    transition: background 2s,
+    height 2s,
+    linear 1s;
+}
+
+#box5 {
+    background: forestgreen;
+}
+
+#box5:hover{
+    width: 500%;
+    border: groove red;
+    transition: width 2s,
+    border 2s,
+    linear 1s;
+}
+
+#box6 {
+    background: gold;
+}
+
+#box6:hover{
+    opacity: .2;
+    padding: 20%
+}
