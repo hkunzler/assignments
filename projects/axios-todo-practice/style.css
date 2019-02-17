@@ -2,10 +2,15 @@
     border: 1px solid black;
     display: flex;
     justify-content: space-around;
-    margin: 5px;
+    margin: 5px 20%;
     padding: 3px;
+    background: aliceblue;
 }
 
 .todo-container h1 {
     text-align: center;
+}
+
+body{
+    background: darkcyan;
 }
