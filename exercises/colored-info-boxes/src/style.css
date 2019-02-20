@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.color1{
+    background: lightblue;
+    border: dotted black;
+    width: 25%;
+    text-align: center;
+}
+.color2 {
+    background: lightcoral;
+    border: dotted black;
+    width: 25%;
+    text-align: center;
+}
+.color3 {
+    background: lightcyan;
+    border: dotted black;
+    width: 25%;
+    text-align: center;
+}
+.color4 {
+    background: lightgoldenrodyellow;
+    border: dotted black;
+    width: 25%;
+    text-align: center;
+}
+.color5 {
+    background: lightgray;
+    border: dotted black;
+    width: 25%;
+    text-align: center;
+}
