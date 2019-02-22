@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.background-image{
+    background:url(images/image.jpg);
+    height: 53vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.background-color{
+    background: rgb(0,0,0, .4);
+    height: 100%;
+}
+
+.right-navbar, .left-navbar{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.right-navbar{
+    text-align: center;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 50% 5% 5% 10% 5%;
+}
+
+.list-style{
+    margin: 80px 30%;
+}
+
+.post-style{
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
