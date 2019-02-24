@@ -40,6 +40,8 @@ const BlogList = () => {
         return (
         <div className='list-style'>
                 {blogPost}
+                <button>Older Posts  –></button>
+                <div className="underline"></div>
             </div>
         )
 }

@@ -4,7 +4,7 @@
 }
 .background-image{
     background:url(images/image.jpg);
-    height: 53vh;
+    height: 532px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,19 +21,133 @@
     list-style-type: none;
     text-decoration: none;
     color: white;
+    font-family: "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    padding: 20px 10px;
+}
+.left-navbar{
+    font-size: 20px;
+    line-height: 30px;
 }
 .right-navbar{
     text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
 }
 .navbar{
     display: grid;
     grid-template-columns: 50% 5% 5% 10% 5%;
 }
 
-.list-style{
-    margin: 80px 30%;
+.post-style {
+    border-bottom: 1px solid #212529;
+    margin: 20px 350px;
+}
+.title{
+    font-size: 36px;
+    line-height: 43.2px;
+    font-style: "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+.subtitle a {
+    font-size: 28px;
+    line-height: 33.6px;
+    font-style: "Open Sans",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
-.post-style{
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
+.blue a:hover {
+    color: #0085a1;
+}
+.author {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: Lora,
+    "Times New Roman",
+    serif;
+    font-style: italic;
+    color: #868e96;
+    margin-bottom: 18px;
+}
+.author > a{
+    color: black;
+}
+ a{
+    text-decoration: none;
+    color: black;
+}
+.header{
+    font-family: "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+        padding: 150px;
+
+}
+
+.header > h1{
+    font-size: 80px;
+    line-height: 96px;
+}
+
+button{
+    width: 177px;
+    height: 53px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    font-family: "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    text-align: center;
+    float: right;
+    margin: 0 350px;
+    background: #0085a1;
+    color: white;
+}
+button:hover{
+    background: #00657b;
+}
+.underline{
+    border-bottom: 1px solid #212529;
+    width: 100%;
+    margin-top: 83px;
+}
+
+.icons .fab{
+    display: inline-block;
+    line-height: 53.3332px;
+    font-size: 50px;
+    border: 15px;
+    padding-right: 20px;
+}
+
+.icons {
+    text-align: center;
+    padding-top: 65px;
+}
+
+.icons .fab:hover{
+    color: #0085a1;
+}
+
+.icons > p{
+    font-family: Lora,
+    "Times New Roman",
+    serif;
+    font-size: 14px;
+    padding: 50px 0;
 }
