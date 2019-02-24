@@ -1,0 +1,15 @@
+.flex-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}

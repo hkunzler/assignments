@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.superheroes-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    color: white;
+    text-align: center;
+}

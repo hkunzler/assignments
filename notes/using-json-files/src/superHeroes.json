@@ -1,0 +1,14 @@
+{
+    "superHeroes": [
+        {
+            "name": "Nicholas Cage",
+            "imgURL": "https://consequenceofsound.files.wordpress.com/2018/09/cage-rage-memes.png?w=807",
+            "catchPhrase": "We're gunna steal the declaration of independence!!!"
+        },
+        {
+            "name": "Keanu Reeves",
+            "imgURL": "https://consequenceofsound.files.wordpress.com/2018/09/cage-rage-memes.png?w=807",
+            "catchPhrase": "I know kung-fu"
+        }
+    ]  
+}

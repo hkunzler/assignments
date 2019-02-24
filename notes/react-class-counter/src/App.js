@@ -1,28 +1,55 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import CounterControls from './CounterControls.js'
+import CounterDisplay from './CounterDisplay.js'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends React.Component{
+    constructor() {
+        super()
+        this.state = {
+            counter: 0
+        }
+    }
+    handleIncrement = () => {
+        this.setState(prevState => {
+            return {
+                counter: prevState.counter + 1
+            }
+        })
+    }
+    handleDecrement = () => {
+        this.setState(prevState => {
+            return {
+                counter:prevState.counter - 1
+            }
+        })
+    }
+    handleDivideBy2= () => {
+        this.setState(prevState => {
+            return {
+                counter: prevState.counter / 2
+            }
+        })
+    }
+    handleMultiplyBy2 = () => {
+        this.setState(prevState => {
+            return {
+                counter: prevState.counter * 2
+            }
+        })
+    }
+    render() {
+        return (
+            <div>
+                <CounterDisplay counter={this.state.counter}/>
+                <CounterControls
+                    handleIncrement={this.handleIncrement}
+                    handleDecrement={this.handleDecrement}
+                    handleDivideBy2={this.handleDivideBy2}
+                    handleMultiplyBy2={this.handleMultiplyBy2}
+                />
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
