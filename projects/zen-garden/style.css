@@ -18,6 +18,7 @@ body {
   position: fixed;
 }
 header {
+  position: relative;
   width: 100%;
   background-image: url(images/contours@2x.png),
     url(images/gridlines-opaque.png), url(images/huntington.jpg);
@@ -28,12 +29,17 @@ header {
   height: 41vh;
   display: grid;
   grid-template-rows: 3fr;
+  z-index: -1;
 }
 
 .circle {
+  position: relative;
   background: url(images/enso.svg);
-  width: 20px;
-  z-index: 1001;
+  width: 100px;
+  float: left;
+  bottom: 0;
+  height: 100px;
+  z-index: 1000;
 }
 
 #title {
@@ -136,6 +142,9 @@ main h1 {
   padding: 10pt 50pt;
   justify-content: space-around;
   bottom: 0;
+}
+.footer-icon > p:hover{
+  color: rgb(100, 123, 126);
 }
 
 .hidden:hover {
@@ -244,13 +253,15 @@ main h1 {
   footer{
     background: rgb(225, 234, 228);
   }
-  .test{
+  /* .test{
     grid-column: 1/-1;
+    width: 100%;
+} */
+
 }
-}
-.test {
+/* .test {
   bottom: 0;
   width: 150%;
   grid-column: 1 / 3;
-}
+} */
 

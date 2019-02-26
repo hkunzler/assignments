@@ -1,18 +1,26 @@
 import React from 'react'
 
-const Superhero = (props) => {
-    return(
-                < div style = {
-                    {
-                backgroundImage: `url(${props.img})`,
+class Superhero extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this)
+    }
+    handleClick(e) {
+        e.preventDefault();
+        alert(this.props.catchphrase)
+    }
+    render() {
+        return (
+            < div onClick={this.handleClick} style={{
+                backgroundImage: `url(${this.props.img})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: 850
-                        }} >
-                <h1>{props.name}</h1>
-                <p>{props.catchphrase}</p>
-        </div>
-    )
+            }} >
+                <h1>{this.props.name}</h1>
+            </div>
+        )
+    }
 }
 
 export default Superhero
