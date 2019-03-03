@@ -1,21 +1,52 @@
 import React, { Component } from 'react'
-import {withUglies} from './context/UglyProvider.js'
+import UglyList from './components/UglyList.js'
+import AddUglyForm from './components/AddUglyForm.js'
+import { withUglies } from './context/UglyProvider.js'
 
 class App extends Component{
+    constructor() {
+        super()
+        this.state = {
+            title: '',
+            description: '',
+            imgUrl: ''
+        }
+    }
     componentDidMount() {
        this.props.getUglies()
+    }
+    handleChange = e => {
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
+    }
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addUgly(this.state)
+        this.setState({
+            title: '',
+            description: '',
+            imgUrl: ''
+        })
     }
     render() {
         return (
             <div>
-                <h1>UGLY THINGS</h1>
-                {this.props.uglies.map(ugly => (
-                    <div style={{ border: 'solid black', margin: 5 }}>
-                        <h1>{ugly.title}</h1>
-                        <h3>{ugly.description}</h3>
-                        <div style={{backgroundImage: `url(${ugly.imgURL})`, backgroundSize: 'cover'}}></div>
-                    </div>
-                ))}
+                <AddUglyForm
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    title={this.state.title}
+                    description={this.state.description}
+                    imgUrl={this.state.imgUrl}
+                    buttonText={"Add Ugly Thing"}
+                />
+                <UglyList
+                    uglies={this.props.uglies}
+                    handleDelete={this.props.handleDelete}
+                    handleEdit={this.props.handleEdit}
+                />
+                
             </div>
         )
     }
