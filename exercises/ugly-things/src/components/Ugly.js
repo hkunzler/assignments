@@ -35,11 +35,12 @@ class Ugly extends Component {
     render() {
         const { title, description, imgUrl, handleDelete, _id } = this.props
         return (
-            <div>
+            < div  >
                 {!this.state.isToggled ?
-                    <div style={{ backgroundImage: `url(${imgUrl})`, border: '1px solid black', margin: 5, backgroundSize: 'cover' }}>
+                    <div style={{ border: '1px solid black', margin: 5, textAlign: 'center'}}>
                         <h1>{title}</h1>
                         <p>{description}</p>
+                        <div style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover', height: 200, backgroundPosition: 'center'}}></div>
                         <button onClick={() => handleDelete(_id)}>DELETE</button>
                         <button onClick={this.toggler}>Edit</button>
                     </div>

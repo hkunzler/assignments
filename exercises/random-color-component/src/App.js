@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor() {
+        super()
+        this.state = {
+            colors: []
+        }
+    }
+    componentDidMount() {
+        axios.get('http://www.colr.org/json/colors/random/7').then(response => {
+            this.setState({
+                colors: response.data.colors
+            })
+        }).catch(error => console.log(error))
+    }
+   
+    render() {
+        const mappedColors = this.state.colors.map((item) => {
+            return (
+                <div>
+                    <h3>{item.hex}</h3>
+
+                </div>
+            )
+        })
+        document.body.style = `background: #${this.state.colors[0] && this.state.colors[0].hex}`
+
+        console.log(this.state.colors)
+            
+        return (
+            <div>
+                
+            </div>
+        );
+    }
 }
 
-export default App;
+export default App

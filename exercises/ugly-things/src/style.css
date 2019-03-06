@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+    margin: 5px 200px;
+}
+
+.grid-box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.two-grid{
+    display: grid;
+    grid-template-columns:  15% auto;
+}

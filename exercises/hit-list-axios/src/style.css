@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    box-sizing: border-box
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://pbs.twimg.com/profile_images/880392455182577664/-7jt5WLB_400x400.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: darkred;
+    background-color: black;
+    height: 200px;
+    font-size: 80px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0 20%;
+}
+
+body{
+    background: url(https://images.unsplash.com/photo-1521798903226-9c2e199e3c74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+
+}
+
+.item-title{
+    display: flex;
+    background: rgba(0, 0, 255, 0.438);
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 20%;
+}

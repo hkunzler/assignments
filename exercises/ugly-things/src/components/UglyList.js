@@ -9,7 +9,7 @@ const UglyList = (props) => {
         key={ugly._id}
     />)
     return (
-        <div>
+        < div className = 'grid-box' >
             {mappedUglies}
         </div>
     )
