@@ -6,7 +6,9 @@
     "axios": "^0.18.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-google-map-street-view": "^1.1.0",
+    "react-scripts": "2.1.5",
+    "react-streetview": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
