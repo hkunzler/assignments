@@ -13,7 +13,6 @@ class MapOverlook extends Component {
 
     loadMap = () => { 
         loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAZWP5LJr8ovJ1FRCijcfomOVmzTpYeQ28&callback=initMap")
-        // loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAZWP5LJr8ovJ1FRCijcfomOVmzTpYeQ28&callback=initMap")
         window.initMap = this.initMap
     }
 
@@ -21,25 +20,29 @@ class MapOverlook extends Component {
         const berkeley = { lat: 37.869085, lng: -122.254775 }
         this.setState ( {
             sv: new window.google.maps.StreetViewService()
-        })
+        }, () => console.dir(this.state.sv))
+                
         // const panorama = new window.google.maps.StreetViewPanorama(document.getElementById('pano'));
         const map = new window.google.maps.Map(document.getElementById('map'), {
             center: berkeley,
-            zoom: 8,
-            streetViewControl: false
+            zoom: 16,
+            streetViewControl: false,
+           
         });
         console.dir(map);
         const mapEl = document.getElementById('map')
+        console.dir(mapEl);
         mapEl.addEventListener("click", this.handleClick)
-        this.state.sv.getPanorama({ location: berkeley, radius: 50 }, this.processSVData())
-        
+        this.state.sv.getPanorama(this.processSVData({ location: berkeley, radius: 50 }))
+        console.log(this.state.sv.getPanorama);
         // this.handleClick();
+        
     }
     handleClick = (e) => {
         // console.log('test');
             e.preventDefault();
             // alert('click')////
-            this.state.sv.getPanorama({location: e.latLng, radius: 50}, this.processSVData())
+        this.state.sv.getPanorama(this.processSVData({ location: e.latLng, radius: 50 }))
         }                                                                                              
     handleImageClick = (e) => {
         // e.preventDefault();
@@ -51,14 +54,15 @@ class MapOverlook extends Component {
         });
         this.panorama.setVisible(true)
     }
-    processSVData = ((data, status) => {
+    processSVData = (data, status) => { 
                 const panorama = new window.google.maps.StreetViewPanorama(document.getElementById('pano'));
+        console.log(data);
+        // if (status === 'OK') {
 
-        if (status === "OK") {
             var marker = new window.google.maps.Marker({
-                position: this.data.loacation.latLng,
+                position: data.location.latLng,
                 map: this.map,
-                title: this.data.location.description
+                title: data.location.description
             })
             panorama.setPano(data.location.pano)
             panorama.setPov({
@@ -77,12 +81,12 @@ class MapOverlook extends Component {
             // //     });
             // //     this.panorama.setVisible(true)
             // // }
-            marker.addEventListener("click", this.handleImageClick)
+            // marker.addEventListener("click", this.handleImageClick)
             // this.handleImageClick()
-        } else {
-            console.log("Street View data not found for this location");
-        }
-    }) 
+        // } else {
+        //     console.log("Street View data not found for this location");
+        // }
+    } 
 
     render() {
         return (
