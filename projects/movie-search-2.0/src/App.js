@@ -1,51 +1,24 @@
-import React, { Component } from "react";
-// import "./style.css";
-import {withMovies} from './context/MovieProvider'
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      movies: ''
-    };
-  }
-handleChange = (e) => {
-      this.setState({
-          [e.target.name]: e.target.value
-    })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-      this.props.getMovies(this.state.movieSearch)
-      this.setState({
-          movieSearch: ''
-      })
-  }
-  render() {
-    return (
-        <div>
-            <h2>Search for Movies</h2>
-            <form onSubmit={this.handleSubmit}>
-                <input
-                    type='text'
-                    placeholer="Avengers"
-                    name='movieSearch'
-                    value={this.state.movieSearch}
-                    onChange={this.handleChange}
-                />
-                <button>Search</button>
-            </form>
-            <div>
-                {this.props.movies.map(movie =>
-                    <div>
-                       <h1>{movie.title}</h1>
-                        <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
-                        <p>{movie.overview}</p>
-                    </div>
-                    )}
-            </div>
-        </div>
-    );
-  }
-}
+import React from 'react';
+import Nav from './components/Nav'
+import Contact from './components/Contact'
+import SearchPage from './components/SearchPage'
+import Movie from './components/Movie'
+import { Switch, Route, withRouter } from 'react-router-dom'
+import './style.css'
 
-export default withMovies(App);
+
+
+const App = () => {
+        return (
+            <div>
+                <Nav/>
+                <Switch >
+                    <Route exact path='/' component={SearchPage} />
+                    <Route path='/contact' component={Contact} />
+                    <Route path='/movie/:movieId' component={Movie}/>
+               </Switch>
+            </div>
+        );
+    }
+
+export default withRouter(App);
