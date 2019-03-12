@@ -13,8 +13,8 @@ const Movie = props => {
       </Link>
       <h1
         style={{ textAlign: "center", fontSize: "5vw", paddingBottom: "25px" }}
-      >
-              {currentMovie.title !== undefined ? currentMovie.title : currentMovie.original_name}
+          >
+           {currentMovie.title !== undefined ? currentMovie.title : currentMovie.original_name}
       </h1>
       <div
         // style={{ display: "flex", justifyContent: "center", margin: "0 15%" }}

@@ -9,18 +9,18 @@ class SearchForm extends Component {
       movieSearch: ""
     };
   }
-  handleChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.getMovies(this.state.movieSearch);
-    this.setState({
-      movieSearch: ""
-    });
-  };
+  // handleChange = e => {
+  //   this.setState({
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  //   this.props.getMovies(this.state.movieSearch);
+  //   this.setState({
+  //     movieSearch: ""
+  //   });
+  // };
   render() {
     return (
       <div style={{ width: "100%" }}>
@@ -30,15 +30,15 @@ class SearchForm extends Component {
           </h2>
           <form
             style={{ display: "flex", justifyContent: "center" }}
-            onSubmit={this.handleSubmit}
+            onSubmit={this.props.handleSubmit}
           >
             <input
               style={{ width: "500px", border: "none" }}
               type="text"
               placeholder="Avengers"
               name="movieSearch"
-              value={this.state.movieSearch}
-              onChange={this.handleChange}
+              value={this.props.movieSearch}
+              onChange={this.props.handleChange}
             />
             <button
               style={{ background: "none", border: "none", color: "white" }}

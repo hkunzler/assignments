@@ -43,6 +43,8 @@ a {
     justify-content: center;
     margin: 0 15%;
 }
+
+
 @media only screen and (max-width: 1325px){
     .movie-image {
         width: 300px;
@@ -59,7 +61,7 @@ a {
     .grid-container {
         grid-template-columns: auto;
     }
-}
+}               
 
 @media only screen and (max-width: 650px) {
     .movie{
