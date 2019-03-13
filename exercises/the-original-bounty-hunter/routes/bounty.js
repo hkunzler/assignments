@@ -40,8 +40,8 @@ userRouter.route('/:_id')
     .delete((req, res) => {
         const updatedDB = bountyList.filter(bounty =>
             bounty._id !== req.params._id)
-        bountyList = updatedDB
-        res.send("Bounty successfully eliminated")
+            bountyList = updatedDB
+            res.send("Bounty successfully eliminated")
     })
     .put((req, res) => {
         const foundBounty = bountyList.find(bounty => bounty._id === req.params._id)
