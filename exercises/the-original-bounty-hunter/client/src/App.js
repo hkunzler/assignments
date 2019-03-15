@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import Bounty from './components/Bounty.js'
-
+import BountyForm from './components/BountyForm'
+import BountyList from './components/BountyList'
+import {withBounty} from './context/BountyProvider'
 
 class App extends Component {
     constructor() {
@@ -9,59 +9,49 @@ class App extends Component {
         this.state = {
             bountyList: [],
             firstName: '',
-            lastName: ''
+            lastName: '',
+            living: false,
+            bounty: '',
+            type: ''
         }
     }
-    componentDidMount() {
-        axios.get("/bounty").then(response => {
-            this.setState({
-                bountyList: response.data
-            })
-        })
+    componentDidMount(){
+        this.props.getBounty()
     }
     handleChange = e => {
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         })
     }
     handleSubmit = e => {
         e.preventDefault()
-        const newbountyList = {
+        const newBountyList = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             living: this.state.living,
             bounty: this.state.bounty,
-            type: this.state.type
+            type: this.state.type,
         }
-        axios.post("/bounty", newbountyList).then(response => {
-            this.setState(prevState => ({
-                bountyList: [...prevState.bountyList, response.data],
-                firstName: '',
-                lastName: '',
-                // living: '',
-                // type: ''
-            }))
+        this.props.addBounty(newBountyList)
+        this.setState({
+            firstName: '',
+            lastName: '',
+            living: false,
+            bounty: '',
+            type: ''
         })
     }
-    handleDelete = (_id) => {
-        axios.delete(`/bounty/${_id}`).then(response => {
-            this.setState(prevState => ({
-                bountyList: prevState.bountyList.filter( bounty => bounty._id !== _id)
-            }))
-        })
-    }
+    
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange}/>
-                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
-                    <button>Add bountyList</button>
-                </form>
-                {this.state.bountyList.map(bounty => <Bounty handleDelete={this.handleDelete} key={bounty._id}{...bounty}/>)}
+                <BountyForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} {...this.state} />
+                {/* <BountyForm/> */}
+                <BountyList />
             </div>
         );
     }
 }
 
-export default App;
+export default withBounty(App)
