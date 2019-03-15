@@ -36,7 +36,7 @@ class BountyProvider extends Component {
     handleDelete = (_id) => {
         axios.delete(`/bounty/${_id}`).then(response => {
             this.setState(prevState => ({
-                bountyList: prevState.bountyList.filter(bounty => bounty._id !== _id)
+                bounty: prevState.bounty.filter(bounty => bounty._id !== _id)
             }))
         })
     }
@@ -48,7 +48,7 @@ class BountyProvider extends Component {
                     bounty: this.state.bounty,
                     getBounty: this.getBounty,
                     addBounty: this.addBounty,
-                    deleteWizard: this.deleteWizard
+                    handleDelete: this.handleDelete
                 }}
             >
                 {this.props.children}

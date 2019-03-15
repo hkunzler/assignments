@@ -48,7 +48,7 @@ class App extends Component {
             <div>
                 <BountyForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} {...this.state} />
                 {/* <BountyForm/> */}
-                <BountyList />
+                <BountyList handleDelete={this.props.handleDelete}/>
             </div>
         );
     }
